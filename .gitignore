@@ -131,3 +131,7 @@ _UpgradeReport_Files/
 __pycache__
 .DS_Store
 *~
+
+out_ios/
+tools/ios-framework/bin/
+
