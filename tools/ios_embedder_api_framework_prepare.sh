@@ -109,6 +109,7 @@ V8_INCLUDE_PATH='./deps/v8/include'
 UV_INCLUDE_PATH='./deps/uv/include'
 
 DST_PATH=$NODELIB_PROJECT_PATH/include
+rm -rf ${DST_PATH}
 mkdir ${DST_PATH}
 
 cp $NODE_INCLUDE_PATH/*.h $DST_PATH
