@@ -23,6 +23,7 @@ export GYP_DEFINES
 ./configure --dest-os=ios --dest-cpu=arm64 --with-intl=none --cross-compiling --enable-static --openssl-no-asm --v8-options=--jitless --without-node-code-cache --without-node-snapshot
 make -j$(getconf _NPROCESSORS_ONLN)
 
+mkdir -p $TARGET_LIBRARY_PATH
 
 cp $LIBRARY_PATH/libbrotli.a $TARGET_LIBRARY_PATH/
 cp $LIBRARY_PATH/libcares.a $TARGET_LIBRARY_PATH/
@@ -108,6 +109,7 @@ V8_INCLUDE_PATH='./deps/v8/include'
 UV_INCLUDE_PATH='./deps/uv/include'
 
 DST_PATH=$NODELIB_PROJECT_PATH/include
+mkdir ${DST_PATH}
 
 cp $NODE_INCLUDE_PATH/*.h $DST_PATH
 cp $V8_INCLUDE_PATH/*.h $DST_PATH
